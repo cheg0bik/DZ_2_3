@@ -22,10 +22,12 @@ namespace ConsoleApp2.srp
             {
                 Console.WriteLine("Employee: " + Name + " Salary: $" + Salary);
             }
-
-            public void SaveToFile()
+        }
+        class EmpolyeeFileManager
+        {
+            public void SaveToFile(Employee emp)
             {
-                File.WriteAllText("employee.txt", Name + " - " + Salary);
+                File.WriteAllText("employee.txt", emp.Name + " - " + emp.Salary);
                 Console.WriteLine("Employee saved to file!");
             }
 
