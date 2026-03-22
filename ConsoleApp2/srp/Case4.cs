@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
+Класс Employee нарушал принцип единственной ответственности(SRP). Класс отвечал за кардинальные разные задачи: 1. хранение данных 
+о зарплате и вывод информации, 2. работа с файлами. 
+Методы SaveToFile и LoadFromFile были вынесены в новый класс EmpolyeeFileManager, чтобы каждый класс отвечал за свою задачу.
+*/
 namespace ConsoleApp2.srp
 {
     class Case4
